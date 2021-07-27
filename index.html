@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Clone</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/0ccd48ad8b.js" crossorigin="anonymous"></script>
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section class="dashboard__container">
+        <div class="dashboard__left">
+            <div class="dashboard__left-nav">
+                <span class="dashboard__left-nav-heading">
+                    <small>N</small>&nbsp; NGMA
+                    <span>
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </span>
+                <ul class="dashboard__left-nav-links">
+                    <a href="#" class="dashboard__left-nav-link">
+                        <!-- Search -->
+                        <i class="fa fa-search" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                        Quick Find
+                    </a>
+                    <a href="#" class="dashboard__left-nav-link">
+                        <!-- Time -->
+                        <i class="fa fa-clock-o" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                        All Updates
+                    </a>
+                    <a href="#" class="dashboard__left-nav-link">
+                        <!-- Setting -->
+                        <i class="fa fa-cog" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                        Setting & Members
+                    </a>
+                </ul>
+                <span>Workspace</span>
+                <ul class="dashboard__left-nav-links">
+                    <a href="#" class="dashboard__left-nav-link">
+                        <i class="fa fa-caret-right" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                        <span>
+                            <img src="https://img.icons8.com/color/48/000000/calendar--v1.png" />
+                            Content Calender
+                        </span>
+                    </a>
+                    <a href="#" class="dashboard__left-nav-link">
+                        <i class="fa fa-caret-right" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                        <span>
+                            <img src="https://img.icons8.com/color-glass/50/000000/pencil.png" />
+                            Meeting Notes
+                        </span>
+                    </a>
+                </ul>
+                <span>Private</span>
+                <ul class="dashboard__left-nav-links">
+                    <a href="#" class="dashboard__left-nav-link">
+                        <!-- Add -->
+                        <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                        Add a page
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="dashboard__right">
+            <div class="dashboard__right-nav">
+                <span>
+                    <img src="https://img.icons8.com/color/48/000000/calendar--v1.png" style="margin-right: 0.4rem;" />
+                    Content Calendar
+                </span>
+                <ul class="dashboard__right-nav-links">
+                    <div class="added__friends">
+                        <img src="./assets/user-3.jpg" alt="friend1" class="added__photo">
+                        <img src="./assets/user-4.jpg" alt="Friend2" class="added__photo">
+                        <img src="./assets/user-5.jpg" alt="Friend3" class="added__photo">
+                        <img src="./assets/user-6.jpg" alt="Friend4" class="added__photo">
+                    </div>
+                    <a href="#">Share</a>
+                    <a href="#">Update</a>
+                    <a href="#">Favorite</a>
+                </ul>
+            </div>
+            <div class="dashboard_right-description">
+                <input type="text" value="Content Calendar">
+                <textarea name="" id="" placeholder="">Track content projects like articles, podcasts, videos, etc. through stages of development.Store research, notes, recordings, visual assets, and drafts inside each card. See who's assigned and when projects are due.
+                </textarea>
+                <span><i style="margin-right: 0.4rem;" class="fa fa-long-arrow-down" aria-hidden="true"></i>Click
+                    <strong>By Status</strong> to group projects by assignee, view deadlines on a calendar, and
+                    more.</span>
+            </div>
+            <div class="dashboard_right-categories">
+                <div class="dropdown">
+                    <span>
+                        <i class="fa fa-list-alt" aria-hidden="true"></i>
+                        By Status
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                    <div class="dropdown-content">
+                        <p>Hello World!</p>
+                    </div>
+                </div>
+                <div class="categories">
+                    <a href="#">Properties</a>
+                    <a href="#">Group by Status</a>
+                    <a href="#">Filter</a>
+                    <a href="#">Sort</a>
+                    <button><span>New</span><span><i class="fa fa-angle-down" aria-hidden="true"></i></span></button>
+                </div>
+            </div>
+
+            <div class="main-container">
+                <ul class="columns">
+                    <li class="column">
+                        <div class="column-header">
+                            <h4>Ideas</h4>
+                            <div>
+                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                            </div>
+                        </div>
+                        <ul class="task-list" id="to-do">
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Abanindranath Tagore</p>
+                            </li>
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Rabindranath Tagore</p>
+                            </li>
+                            <li class="task">
+                                <p>
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                    Sawalaram Laxman Haldankar
+                                    <img src="./assets/_1.jpg" alt="">
+                                </p>
+                            </li>
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Measure</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="column">
+                        <div class="column-header">
+                            <h4>In Review</h4>
+                            <div>
+                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                            </div>
+                        </div>
+                        <ul class="task-list" id="doing">
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Hypothesis</p>
+                            </li>
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>User Testing</p>
+                            </li>
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Prototype</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="column">
+                        <div class="column-header">
+                            <h4>Approved</h4>
+                            <div>
+                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                            </div>
+                        </div>
+                        <ul class="task-list" id="done">
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Ideation</p>
+                            </li>
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Sketches</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="column">
+                        <div class="column-header">
+                            <h4>Publishing</h4>
+                            <div>
+                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="column">
+                        <div class="column-header">
+                            <h4>Published</h4>
+                            <div>
+                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                            </div>
+                        </div>
+                        <ul class="task-list" id="done">
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Ideation</p>
+                            </li>
+                            <li class="task">
+                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Sketches</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li class="column trash-column">
+                        <div class="column-header">
+                            <h4>Trash</h4>
+                        </div>
+                        <ul class="task-list" id="trash">
+                            <li class="task">
+                                <p>Interviews</p>
+                            </li>
+                            <li class="task">
+                                <p>Research</p>
+                            </li>
+
+                        </ul>
+                        <div class="column-button">
+                            <button class="button delete-button" onclick="emptyTrash()">Delete</button>
+                        </div>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.min.js"
+        integrity="sha512-MrA7WH8h42LMq8GWxQGmWjrtalBjrfIzCQ+i2EZA26cZ7OBiBd/Uct5S3NP9IBqKx5b+MMNH1PhzTsk6J9nPQQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
