@@ -35,3 +35,5 @@ function emptyTrash() {
   /* Clear tasks from 'Trash' column */
   document.getElementById("trash").innerHTML = "";
 }
+
+

@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./popUp.css">
 </head>
 
 <body>
@@ -51,6 +52,7 @@
                         <span>
                             <img src="https://img.icons8.com/color/48/000000/calendar--v1.png" />
                             Content Calender
+                            
                         </span>
                     </a>
                     <a href="#" class="dashboard__left-nav-link">
@@ -76,6 +78,7 @@
                 <span>
                     <img src="https://img.icons8.com/color/48/000000/calendar--v1.png" style="margin-right: 0.4rem;" />
                     Content Calendar
+                    
                 </span>
                 <ul class="dashboard__right-nav-links">
                     <div class="added__friends">
@@ -100,9 +103,36 @@
             <div class="dashboard_right-categories">
                 <div class="dropdown">
                     <span>
-                        <i class="fa fa-list-alt" aria-hidden="true"></i>
-                        By Status
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        <div class="containerd">
+                            <div class="more">
+                                <button id="more-btn" class="more-btn">
+                                    <i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp By Status &nbsp<i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </button>
+                                <div class="more-menu">
+                                    <div class="more-menu-caret">
+                                        <div class="more-menu-caret-outer"></div>
+                                        <div class="more-menu-caret-inner"></div>
+                                    </div>
+                                    <ul class="more-menu-items" tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
+                                        <li class="more-menu-item" role="presentation">
+                                            <button type="button" class="more-menu-btn" role="menuitem">By Status</button>
+                                        </li>
+                                        <li class="more-menu-item" role="presentation">
+                                            <button type="button" class="more-menu-btn" role="menuitem">By Assignee</button>
+                                        </li>
+                                        <li class="more-menu-item" role="presentation">
+                                            <button type="button" class="more-menu-btn" role="menuitem">Deadline</button>
+                                        </li>
+                                        <li class="more-menu-item" role="presentation">
+                                            <button type="button" class="more-menu-btn" role="menuitem">Launch</button>
+                                        </li>
+                                        <li class="more-menu-item" role="presentation">
+                                            <button type="button" class="more-menu-btn" role="menuitem">Published</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </span>
                     <div class="dropdown-content">
                         <p>Hello World!</p>
@@ -128,7 +158,39 @@
                         </div>
                         <ul class="task-list" id="to-do">
                             <li class="task">
-                                <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Abanindranath Tagore</p>
+                                <a href="#qrCode"><p><i class="fa fa-file-text-o" aria-hidden="true"></i>Abanindranath Tagore</p></a>
+                                <div class="containerd">
+                                    <div class="more">
+                                        <button id="more-btn" class="more-btn">
+                                            <span class="more-dot"></span>
+                                            <span class="more-dot"></span>
+                                            <span class="more-dot"></span>
+                                        </button>
+                                        <div class="more-menu">
+                                            <div class="more-menu-caret">
+                                                <div class="more-menu-caret-outer"></div>
+                                                <div class="more-menu-caret-inner"></div>
+                                            </div>
+                                            <ul class="more-menu-items" tabindex="-1" role="menu" aria-labelledby="more-btn" aria-hidden="true">
+                                                <li class="more-menu-item" role="presentation">
+                                                    <button type="button" class="more-menu-btn" role="menuitem">Share</button>
+                                                </li>
+                                                <li class="more-menu-item" role="presentation">
+                                                    <button type="button" class="more-menu-btn" role="menuitem">Copy</button>
+                                                </li>
+                                                <li class="more-menu-item" role="presentation">
+                                                    <button type="button" class="more-menu-btn" role="menuitem">Embed</button>
+                                                </li>
+                                                <li class="more-menu-item" role="presentation">
+                                                    <button type="button" class="more-menu-btn" role="menuitem">Block</button>
+                                                </li>
+                                                <li class="more-menu-item" role="presentation">
+                                                    <button type="button" class="more-menu-btn" role="menuitem">Report</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </li>
                             <li class="task">
                                 <p><i class="fa fa-file-text-o" aria-hidden="true"></i>Rabindranath Tagore</p>
@@ -227,10 +289,87 @@
             </div>
         </div>
     </section>
+    <!-- popup -->
+    <div class="popup" id="qrCode">
+		<div class="popup__content">
+            <a href="#" class="popup__close">&times;</a>			
+            <div class="containera">
+                <h2>Abanindranath Tagore</h2>
+                <ul class="responsive-table">
+                  <li class="table-row">
+                    <div class="col col-1" data-label="Job Id" style="margin-left:3rem;"><i class="fa fa-user" aria-hidden="true"></i>&nbsp Assign</div>
+                    <div class="col col-2" data-label="Customer Name">John Doe</div>                 
+                  </li>
+                  <li class="table-row">
+                    <div class="col col-1" data-label="Job Id" style="margin-left:3rem;"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp Status</div>
+                    <div class="col col-2" data-label="Customer Name">Jennifer Smith</div>
+                  </li>
+                  <li class="table-row">
+                    <div class="col col-1" data-label="Job Id" style="margin-left:3rem;"><i class="fa fa-link" aria-hidden="true"></i>&nbsp Link</div>
+                    <div class="col col-2" data-label="Customer Name">www.google,com</div>               
+                  </li>
+                  <li class="table-row">
+                    <div class="col col-1" data-label="Job Id" style="margin-left:3rem;"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp Type</div>
+                    <div class="col col-2" data-label="Customer Name">Blog Post</div>
+                  </li>
+                  <li class="table-row">
+                    <div class="col col-1" data-label="Job Id" style="margin-left:3rem;"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp Deadline</div>
+                    <div class="col col-2" data-label="Customer Name">July 30,2021</div>
+                  </li>
+                  <li class="table-row">
+                    <div class="col col-1" data-label="Job Id" style="margin-left:3rem;"><i class="far fa-calendar-alt" aria-hidden="true"></i>&nbsp Publish </div>
+                    <div class="col col-2" data-label="Customer Name">August 2,2021</div>               
+                  </li>
+                  <li class="table-row">
+                    <div class="col col-1" data-label="Job Id" style="margin-left:3rem;"><i class="fas fa-paperclip" aria-hidden="true"></i>&nbsp Media</div>
+                    <div class="col col-2" data-label="Customer Name">Empty</div>
+                  </li>
+                  <center><hr style="width:75%;margin-bottom: 1rem;"></center>
+                  <li class="table-row">
+                    <div class="col col-1" data-label="Job Id" style="margin-left:3rem;"><i class="fa fa-comment-o" aria-hidden="true"></i>&nbspComment</div>
+                    <div class="col col-2" data-label="Customer Name"><input type="tel" id="phone" name="phone" style="outline: transparent;border:none" placeholder="Type the comment here"></div>
+                  </li>
+                  <center><hr style="width:75%;margin-top:-.5rem;margin-bottom: 1rem;"></center>
+                </ul>
+                <h2>Remarks</h2>
+              </div>
+		</div>	                    
+	</div>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.min.js"
         integrity="sha512-MrA7WH8h42LMq8GWxQGmWjrtalBjrfIzCQ+i2EZA26cZ7OBiBd/Uct5S3NP9IBqKx5b+MMNH1PhzTsk6J9nPQQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>
+        var el = document.querySelectorAll('.more');
+        var btn = el.querySelector('.more-btn');
+        var menu = el.querySelector('.more-menu');
+        var visible = false;
+        console.log(el)
+        function showMenu(e) {
+            e.preventDefault();
+            if (!visible) {
+                visible = true;
+                el.classList.add('show-more-menu');
+                menu.setAttribute('aria-hidden', false);
+                document.addEventListener('mousedown', hideMenu, false);
+            }
+        }
+
+        function hideMenu(e) {
+            if (btn.contains(e.target)) {
+                return;
+            }
+            if (visible) {
+                visible = false;
+                el.classList.remove('show-more-menu');
+                menu.setAttribute('aria-hidden', true);
+                document.removeEventListener('mousedown', hideMenu);
+            }
+        }
+
+        btn.addEventListener('click', showMenu, false);
+    </script>
 </body>
 
 </html>
