@@ -1,0 +1,103 @@
+.popup{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(black, $alpha: 0.8);
+  transition: all .3s;
+  &:target{
+      opacity: 1;
+      visibility: visible;
+  }
+  &__close{
+      &:link,
+      &:visited{
+          color: var(--grey-dark);
+          position: absolute;
+          top: 0.5rem;
+          right: 1rem;
+          font-size: 2rem;
+          text-decoration: none;
+          display: inline-block;
+
+      }
+      &:hover{
+          color: black;
+      }
+     
+  }
+  &__content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 75%;
+      height: 36rem;
+      overflow-y: scroll;
+      background-color: white;
+      box-shadow: 0 2rem 4rem rgba(black ,.2);
+      border-radius: 3px;
+  }
+  &__header{
+    padding: 0.7rem 1rem;
+  }
+}
+
+.popup__form{
+  width: 70%;
+  padding-top: 4rem;
+  padding-left: 6rem;
+  & > input{
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--grey-dark);
+    outline: none;
+    border: none;
+    background: transparent !important;
+    margin-bottom: 1.8rem;
+  }
+  &-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    &-2{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.6rem;
+      &  > .popup__form-label{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+      & > .popup__form-input{
+        width: 100%;
+      }
+    }
+  }
+  &-label{
+    width: 25%;
+    color: var(--grey-light);
+    font-size: 1.1rem;
+  }
+  &-input{
+    width: 300px;
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    font-family: inherit !important;
+    outline: none !important;
+  }
+
+}
+
+.multipleChosen, .multipleSelect2{
+  width: 300px;
+  padding: 0.4rem !important;
+}
+.chosen-container-multi .chosen-choices li.search-field input[type=text]{
+  font-family: inherit !important;
+  padding: 1rem !important;
+}

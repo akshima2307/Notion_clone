@@ -1,0 +1,24 @@
+{
+  "name": "notion_clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css  -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshima2307/Workspace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshima2307/Workspace/issues"
+  },
+  "homepage": "https://github.com/akshima2307/Workspace#readme"
+}

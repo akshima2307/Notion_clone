@@ -7,14 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notion Clone</title>
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/0ccd48ad8b.js" crossorigin="anonymous"></script>
     <!-- Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./popUp.css">
+
+    <!-- Multiple Select -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.min.css" integrity="sha512-yVvxUQV0QESBt1SyZbNJMAwyKvFTLMyXSyBHDO4BG5t7k/Lw34tyqlSDlKIrIENIzCl+RVUNjmCPG+V/GMesRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -79,7 +81,7 @@
         </div>
 
         <!-- Dashboard right container -->
-        <div class="dashboard__right">
+        <div class="dashboard__right" id="dashboard">
             <div class="dashboard__right-nav">
                 <span>
                     <img src="https://img.icons8.com/color/48/000000/calendar--v1.png" style="margin-right: 0.4rem;" />
@@ -96,6 +98,7 @@
                     <a href="#">Share</a>
                     <a href="#">Update</a>
                     <a href="#">Favorite</a>
+                    <a href="#"><i class="fas fa-ellipsis-h" aria-hidden="true"></i></a>
                 </ul>
             </div>
             <div class="dashboard_right-description">
@@ -179,7 +182,7 @@
                         </div>
                     </div>
                     <button class="dropdown">
-                        <a>New</a>
+                        <a href="#popup">New</a>
                         <i onclick="myFunction(this)" class="dropbtn fa fa-angle-down" aria-hidden="true"></i>
                         <div id="myDropdown" class="dropdown-content" style="width: 22rem; left: -16rem; text-align: left;">
                             <span style="color: var(--grey-light); line-height: 30px;">Templates for NGMA Calender</span>
@@ -203,7 +206,14 @@
                         <div class="column-header">
                             <h4>Ideas</h4>
                             <div>
-                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <i onclick="myFunction(this)"  class="dropbtn fas fa-ellipsis-h" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <div id="myDropdown" class="dropdown-content" style="top: 73%; width: 10rem;">
+                                    <div>
+                                        <a href="#"><i class="far fa-eye-slash"></i>&nbsp;Hide</a>
+                                        <a href="#"><i class="far fa-trash-alt"></i>&nbsp;Delete</a>
+                                    </div>  
+                                </div>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <ul class="task-list" id="to-do">
@@ -229,7 +239,14 @@
                         <div class="column-header">
                             <h4>In Review</h4>
                             <div>
-                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <i onclick="myFunction(this)"  class="dropbtn fas fa-ellipsis-h" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <div id="myDropdown" class="dropdown-content" style="top: 73%; width: 10rem;">
+                                    <div>
+                                        <a href="#"><i class="far fa-eye-slash"></i>&nbsp;Hide</a>
+                                        <a href="#"><i class="far fa-trash-alt"></i>&nbsp;Delete</a>
+                                    </div>  
+                                </div>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <ul class="task-list" id="doing">
@@ -249,7 +266,14 @@
                         <div class="column-header">
                             <h4>Approved</h4>
                             <div>
-                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <i onclick="myFunction(this)"  class="dropbtn fas fa-ellipsis-h" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <div id="myDropdown" class="dropdown-content" style="top: 73%; width: 10rem;">
+                                    <div>
+                                        <a href="#"><i class="far fa-eye-slash"></i>&nbsp;Hide</a>
+                                        <a href="#"><i class="far fa-trash-alt"></i>&nbsp;Delete</a>
+                                    </div>  
+                                </div>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <ul class="task-list" id="done">
@@ -265,7 +289,14 @@
                         <div class="column-header">
                             <h4>Publishing</h4>
                             <div>
-                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <i onclick="myFunction(this)"  class="dropbtn fas fa-ellipsis-h" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <div id="myDropdown" class="dropdown-content" style="top: 73%; width: 10rem;">
+                                    <div>
+                                        <a href="#"><i class="far fa-eye-slash"></i>&nbsp;Hide</a>
+                                        <a href="#"><i class="far fa-trash-alt"></i>&nbsp;Delete</a>
+                                    </div>  
+                                </div>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                     </li>
@@ -273,7 +304,14 @@
                         <div class="column-header">
                             <h4>Published</h4>
                             <div>
-                                <i class="fa fa-plus" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <i onclick="myFunction(this)"  class="dropbtn fas fa-ellipsis-h" aria-hidden="true" style="margin-right: 0.6rem;"></i>
+                                <div id="myDropdown" class="dropdown-content" style="top: 73%; width: 10rem;">
+                                    <div>
+                                        <a href="#"><i class="far fa-eye-slash"></i>&nbsp;Hide</a>
+                                        <a href="#"><i class="far fa-trash-alt"></i>&nbsp;Delete</a>
+                                    </div>  
+                                </div>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
                             </div>
                         </div>
                         <ul class="task-list" id="done">
@@ -285,32 +323,88 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- <li class="column trash-column">
-                        <div class="column-header">
-                            <h4>Trash</h4>
-                        </div>
-                        <ul class="task-list" id="trash">
-                            <li class="task">
-                                <p>Interviews</p>
-                            </li>
-                            <li class="task">
-                                <p>Research</p>
-                            </li>
-
-                        </ul>
-                        <div class="column-button">
-                            <button class="button delete-button" onclick="emptyTrash()">Delete</button>
-                        </div>
-                    </li> -->
-
                 </ul>
             </div>
         </div>
     </section>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <a href="#dashboard" class="popup__close">&times;</a>
+            <div class="popup__header">
+                <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp; Open as page</a>
+            </div>	
+            <form action="" class="popup__form">
+                <input type="text" name="" id="" placeholder="Untitled">
+                <div class="popup__form-group">
+                    <label for="assign" class="popup__form-label"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Assign</label>
+                    <select class="multipleChosen"  name="assign" multiple="true" class="popup__form-input">
+                        <option value="1"><img src="./assets/user-3.jpg" alt=""> User 1</option>
+                        <option value="2"><img src="./assets/user-4.jpg" alt=""> User 2</option>
+                        <option value="3"><img src="./assets/user-5.jpg" alt=""> User 3</option>
+                        <option value="4"><img src="./assets/user-6.jpg" alt=""> User 4</option>
+                    </select>
+                </div>
+                <div class="popup__form-group">
+                    <label for="status" class="popup__form-label"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp;Status</label>
+                    <select class="multipleChosen"  name="status" multiple="true" class="popup__form-input">
+                        <p>Select an option</p>
+                        <option value="1">Ideas</option>
+                        <option value="2">Approved</option>
+                        <option value="3">Published</option>
+                        <option value="4">In Reveiw</option>
+                    </select>
+                </div>
+                <div class="popup__form-group">
+                    <label for="link" class="popup__form-label"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;Link</label>
+                    <input type="text" name="link" id="" class="popup__form-input">
+                </div>
+                <div class="popup__form-group">
+                    <label for="type" class="popup__form-label"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>&nbsp;Type</label>
+                    <select class="multipleChosen"  name="type" multiple="true" class="popup__form-input">
+                        <p>Select an option</p>
+                        <option value="1">Blog</option>
+                        <option value="2">Video</option>
+                        <option value="3">Podcast</option>
+                        <option value="4">Facebook</option>
+                    </select>
+                </div>
+                <div class="popup__form-group">
+                    <label for="deadline" class="popup__form-label"><i class="fa fa-calendar-o" aria-hidden="true"></i>&nbsp;Deadline</label>
+                    <input type="date" name="deadline" class="popup__form-input">
+                </div>
+                <div class="popup__form-group">
+                    <label for="publication" class="popup__form-label"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp;Publication Date</label>
+                    <input type="date" name="publication" class="popup__form-input">
+                </div>
+                <div class="popup__form-group">
+                    <label for="media" class="popup__form-label"><i class="fa fa-file-o" aria-hidden="true"></i>&nbsp;Media</label>
+                    <input type="file" name="media" class="popup__form-input">
+                </div>
+                <div class="popup__form-group-2">
+                    <label for="research" class="popup__form-label">Research</label>
+                    <textarea name="research" id="" cols="30" rows="10" class="popup__form-input"></textarea>
+                </div>
+                <div class="popup__form-group-2">
+                    <label for="notes" class="popup__form-label">Notes</label>
+                    <textarea name="notes" id="" cols="30" rows="10" class="popup__form-input"></textarea>
+                </div>
+                <div class="popup__form-group-2">
+                    <label for="draft" class="popup__form-label">Draft</label>
+                    <textarea name="draft" id="" cols="30" rows="10" class="popup__form-input"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.min.js"
         integrity="sha512-MrA7WH8h42LMq8GWxQGmWjrtalBjrfIzCQ+i2EZA26cZ7OBiBd/Uct5S3NP9IBqKx5b+MMNH1PhzTsk6J9nPQQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+
     <script>
         /* When the user clicks on the button, 
         toggle between hiding and showing the dropdown content */
@@ -332,6 +426,14 @@
             }
         }
         }
+
+        $(document).ready(function(){
+        //Chosen
+        $(".multipleChosen").chosen({
+            placeholder_text_multiple: "What's your rating" //placeholder
+            });
+        })
+
     </script>
 </body>
 

@@ -1,0 +1,99 @@
+.dashboard__container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    & .dashboard__left{
+        width: 15vw;
+        height: 100vh;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+    }
+    & .dashboard__right{
+        background-color: white;
+        width: 83vw;
+        min-height: 100vh;
+    }
+}
+
+.dashboard__left{
+    &-nav{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        &-heading{
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--grey-dark);
+            margin-left: 0.9rem;
+            & small{
+                background-color: var(--grey-light);
+                color: white;
+                font-weight: 900;
+                padding: 0.3rem 0.3rem;
+                border-radius: 4px;
+            }
+            & span{
+                display: inline-flex;
+                flex-direction: column;
+                margin-left: 0.7rem;
+                & > i{
+                    font-size: 0.9rem;
+                    color: var(--grey-light);
+                }
+            }
+        }
+        &-links:first-of-type{
+            margin-top: 1.6rem;
+        }
+        &-links{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+        }
+        &-link{
+            font-size: 0.989rem;
+            color: var(--grey-light);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0.4rem 0.9rem;
+            width: 15vw;
+            &:hover{
+                background: white;
+            }
+            &--active{
+                background: white;
+            }
+            & > span{
+                display: flex;
+                align-items: center;
+                & > img{
+                    width: 1.5rem;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+        & .new_page_link{
+            border-top: 1px solid rgb(223, 223, 222);
+            position: absolute;
+            bottom: 0%;
+            width: 14vw;
+            padding: 0.4rem;
+            padding-bottom: 0.7rem;
+            padding-right: 0;
+        }
+        & > span{
+            margin-bottom: 0.7rem;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--grey-dark);
+            margin-left: 0.9rem;
+        }
+    }
+}
